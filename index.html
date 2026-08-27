@@ -1,0 +1,2698 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Filipe Istvandic — Psicanalista | Psicanálise - São Paulo e Online</title>
+  <meta name="description" content="Atendimento psicanalítico freudo-lacaniano para adolescentes e adultos. Presencial na Barra Funda, São Paulo, e online para o Brasil e o mundo.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://filipeistvandicpsi.com.br/">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --azul: #576f82;
+      --verde: #577377;
+      --verde-escuro: #505d5f;
+      --terroso: #796d68;
+      --quase-branco: #f6f4f6;
+      --cinza-claro: #efebe9;
+      --rosa-neutro: #e1d7d3;
+      --texto: #262524;
+      --texto-suave: #57534f;
+      --branco: #ffffff;
+      --serif: "Cormorant Garamond", Georgia, serif;
+      --sans: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --header-height: 82px;
+      --content-width: 1680px;
+      --page-gutter: clamp(24px, 6vw, 120px);
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 0;
+    }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+      color: var(--texto);
+      background: linear-gradient(90deg, var(--cinza-claro), var(--rosa-neutro));
+      font-family: var(--sans);
+      font-weight: 300;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    body.menu-open {
+      overflow: hidden;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .skip-link {
+      position: fixed;
+      z-index: 1000;
+      top: 12px;
+      left: 12px;
+      padding: 10px 14px;
+      color: var(--branco);
+      background: var(--verde-escuro);
+      transform: translateY(-160%);
+      transition: transform 180ms ease-out;
+    }
+
+    .skip-link:focus {
+      transform: translateY(0);
+    }
+
+    .site-header {
+      position: fixed;
+      z-index: 100;
+      inset: 0 0 auto;
+      height: var(--header-height);
+      color: var(--terroso);
+      background: rgba(246, 244, 246, 0.94);
+      border-bottom: 1px solid rgba(121, 109, 104, 0.08);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      transition: height 300ms ease, background-color 300ms ease, transform 300ms ease;
+    }
+
+    .site-header.is-scrolled {
+      height: 68px;
+      background: rgba(246, 244, 246, 0.96);
+      box-shadow: 0 8px 28px rgba(80, 93, 95, 0.06);
+    }
+
+    .header-inner {
+      width: min(100%, var(--content-width));
+      height: 100%;
+      margin-inline: auto;
+      padding-inline: var(--page-gutter);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: clamp(18px, 2.2vw, 42px);
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      flex: 0 0 auto;
+      text-decoration: none;
+    }
+
+    .brand-logo {
+      width: clamp(210px, 14vw, 270px);
+      max-height: 62px;
+      object-fit: contain;
+      height: auto;
+      transition: width 300ms ease;
+    }
+
+    .site-header.is-scrolled .brand-logo {
+      width: clamp(195px, 12vw, 235px);
+      max-height: 52px;
+    }
+
+    .brand-mark {
+      display: none;
+      width: 44px;
+      height: 50px;
+      object-fit: contain;
+    }
+
+    .nav-list {
+      display: flex;
+      align-items: center;
+      gap: clamp(20px, 2vw, 42px);
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .nav-link {
+      position: relative;
+      display: inline-block;
+      padding-block: 10px;
+      color: var(--terroso);
+      font-family: var(--serif);
+      font-size: clamp(12px, 1.15vw, 22px);
+      font-weight: 800;
+      line-height: 1;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 2px;
+      left: 0;
+      height: 1px;
+      background: currentColor;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 250ms ease-out;
+    }
+
+    .nav-link:hover::after,
+    .nav-link:focus-visible::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: clamp(12px, 1.4vw, 24px);
+      flex: 0 0 auto;
+    }
+
+    .instagram-link {
+      width: 38px;
+      height: 38px;
+      display: inline-grid;
+      place-items: center;
+      color: var(--terroso);
+      text-decoration: none;
+      border: 1px solid transparent;
+      border-radius: 10px;
+      transition: color 300ms ease, border-color 300ms ease, background-color 300ms ease;
+    }
+
+    .instagram-symbol {
+      width: 18px;
+      height: 18px;
+      display: block;
+      object-fit: contain;
+      filter: invert(44%) sepia(8%) saturate(540%) hue-rotate(337deg) brightness(94%) contrast(88%);
+      transition: filter 300ms ease;
+    }
+
+    .instagram-link:hover,
+    .instagram-link:focus-visible {
+      color: var(--branco);
+      background: var(--verde);
+      border-color: var(--verde);
+    }
+
+    .instagram-link:hover .instagram-symbol,
+    .instagram-link:focus-visible .instagram-symbol {
+      filter: brightness(0) invert(1);
+    }
+
+    .header-cta {
+      min-height: 36px;
+      padding: 8px clamp(12px, 1vw, 18px);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--branco);
+      background: rgba(87, 111, 130, 0.88);
+      border: 1px solid rgba(87, 111, 130, 0.88);
+      border-radius: 2px;
+      font-size: clamp(9px, 0.62vw, 10.5px);
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      line-height: 1.25;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+      white-space: nowrap;
+      transition: color 300ms ease, background-color 300ms ease, border-color 300ms ease, box-shadow 300ms ease;
+    }
+
+    .header-cta:hover,
+    .header-cta:focus-visible {
+      color: var(--branco);
+      background: var(--verde);
+      border-color: var(--verde);
+      box-shadow: 0 8px 20px rgba(80, 93, 95, 0.16);
+    }
+
+    .nav-mobile-actions {
+      display: none;
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 48px;
+      height: 48px;
+      padding: 10px;
+      color: var(--verde-escuro);
+      background: transparent;
+      border: 0;
+      cursor: pointer;
+      transition: transform 300ms ease;
+    }
+
+    .menu-toggle-lines,
+    .menu-toggle-lines::before,
+    .menu-toggle-lines::after {
+      display: block;
+      width: 27px;
+      height: 1px;
+      background: currentColor;
+      transition: transform 250ms ease, opacity 250ms ease;
+    }
+
+    .menu-toggle-lines {
+      position: relative;
+      margin-inline: auto;
+    }
+
+    .menu-toggle-lines::before,
+    .menu-toggle-lines::after {
+      content: "";
+      position: absolute;
+      left: 0;
+    }
+
+    .menu-toggle-lines::before { top: -8px; }
+    .menu-toggle-lines::after { top: 8px; }
+
+    .menu-toggle[aria-expanded="true"] .menu-toggle-lines {
+      background: transparent;
+    }
+
+    .menu-toggle[aria-expanded="true"] .menu-toggle-lines::before {
+      top: 0;
+      transform: rotate(45deg);
+    }
+
+    .menu-toggle[aria-expanded="true"] .menu-toggle-lines::after {
+      top: 0;
+      transform: rotate(-45deg);
+    }
+
+    main {
+      overflow: clip;
+    }
+
+    .site-section {
+      position: relative;
+      min-height: 72vh;
+      scroll-margin-top: 0;
+    }
+
+    #hero {
+      height: 260svh;
+      min-height: 1600px;
+      background: var(--cinza-claro);
+    }
+
+    .hero-sticky {
+      position: sticky;
+      top: 0;
+      height: 100svh;
+      min-height: 620px;
+      overflow: hidden;
+      background-image: url("assets/images/bg-hero.webp");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    .hero-sticky::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(90deg, rgba(246, 244, 246, 0.1), rgba(246, 244, 246, 0));
+    }
+
+    .hero-stage {
+      position: relative;
+      z-index: 1;
+      width: min(100%, var(--content-width));
+      height: 100%;
+      margin-inline: auto;
+      padding-inline: var(--page-gutter);
+    }
+
+    .hero-layer {
+      position: absolute;
+      left: var(--page-gutter);
+      width: min(calc(100% - (2 * var(--page-gutter))), 880px);
+      will-change: opacity, transform;
+    }
+
+    .hero-opening {
+      top: 37%;
+      opacity: 1;
+      transform: translate3d(0, -10%, 0);
+    }
+
+    .hero-conclusion {
+      top: 38%;
+      opacity: 1;
+      transform: none;
+    }
+
+    .hero-title,
+    .hero-conclusion-title {
+      margin: 0;
+      color: var(--azul);
+      font-family: var(--serif);
+      font-weight: 500;
+      letter-spacing: -0.025em;
+    }
+
+    .hero-title {
+      max-width: 840px;
+      font-size: clamp(40px, 3.2vw, 58px);
+      line-height: 1.03;
+    }
+
+    .hero-title em,
+    .hero-conclusion-title em {
+      font-weight: 500;
+    }
+
+    .hero-support {
+      max-width: 760px;
+      margin: clamp(42px, 5vh, 60px) 0 0 10px;
+      color: var(--verde-escuro);
+      font-family: var(--serif);
+      font-size: clamp(21px, 1.55vw, 28px);
+      font-weight: 500;
+      line-height: 1.55;
+      opacity: 0;
+      transform: translate3d(0, 12px, 0);
+      will-change: opacity, transform;
+    }
+
+    .hero-support span {
+      display: block;
+    }
+
+    .hero-conclusion-intro {
+      margin: 0 0 6px;
+      color: var(--verde-escuro);
+      font-family: var(--serif);
+      font-size: clamp(22px, 1.6vw, 29px);
+      font-weight: 500;
+      line-height: 1.35;
+      opacity: 0;
+      transform: translate3d(0, 12px, 0);
+      will-change: opacity, transform;
+    }
+
+    .hero-conclusion-title {
+      max-width: 800px;
+      font-size: clamp(39px, 3vw, 54px);
+      line-height: 1.1;
+      opacity: 0;
+      transform: translate3d(0, 12px, 0);
+      will-change: opacity, transform;
+    }
+
+    .hero-ctas {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: clamp(20px, 2.2vw, 34px);
+      width: min(100%, 740px);
+      margin-top: clamp(36px, 5vh, 52px);
+    }
+
+    .hero-button {
+      min-height: 58px;
+      padding: 14px 22px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--branco);
+      background: rgba(87, 111, 130, 0.88);
+      border: 1px solid rgba(87, 111, 130, 0.88);
+      border-radius: 4px;
+      font-size: clamp(12px, 0.9vw, 16px);
+      font-weight: 400;
+      letter-spacing: 0.055em;
+      line-height: 1.3;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+      opacity: 0;
+      transform: translate3d(0, 12px, 0);
+      will-change: opacity, transform;
+      transition: color 300ms ease, background-color 300ms ease, border-color 300ms ease, box-shadow 300ms ease;
+    }
+
+    .hero-button:hover,
+    .hero-button:focus-visible {
+      color: var(--branco);
+      background: var(--verde);
+      border-color: var(--verde);
+      box-shadow: 0 12px 28px rgba(80, 93, 95, 0.18);
+    }
+
+    #sofrimento-silencio {
+      height: 440svh;
+      min-height: 2700px;
+      background: var(--quase-branco);
+    }
+
+    .silence-sticky {
+      position: sticky;
+      top: 0;
+      height: 100svh;
+      min-height: 620px;
+      overflow: hidden;
+    }
+
+    .silence-background {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    .silence-background img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .silence-stage {
+      position: relative;
+      width: min(100%, var(--content-width));
+      height: 100%;
+      margin-inline: auto;
+      padding-inline: var(--page-gutter);
+    }
+
+    .silence-title {
+      position: absolute;
+      top: 17%;
+      left: var(--page-gutter);
+      margin: 0;
+      color: var(--terroso);
+      font-family: var(--serif);
+      font-size: clamp(40px, 3.2vw, 58px);
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      line-height: 1.05;
+      opacity: 0;
+      transform: translate3d(0, 12px, 0);
+      will-change: opacity, transform;
+    }
+
+    .silence-title em {
+      font-weight: 500;
+    }
+
+    .silence-frame {
+      position: absolute;
+      top: 58%;
+      left: 52%;
+      width: min(43%, 760px);
+      color: var(--terroso);
+      transform: translateY(-50%);
+      will-change: opacity, transform;
+    }
+
+    .silence-frame p {
+      margin: 0 0 clamp(18px, 2.2vh, 28px);
+      font-family: var(--serif);
+      font-size: clamp(21px, 1.55vw, 28px);
+      font-weight: 500;
+      line-height: 1.42;
+    }
+
+    .silence-frame p:last-child {
+      margin-bottom: 0;
+    }
+
+    .silence-item {
+      opacity: 0;
+      transform: translate3d(0, 12px, 0);
+      will-change: opacity, transform;
+    }
+
+    .silence-question {
+      font-size: clamp(25px, 1.9vw, 34px) !important;
+      font-weight: 600 !important;
+    }
+
+    .silence-frame-closing p {
+      margin-bottom: 12px;
+      font-family: var(--sans);
+      font-size: clamp(18px, 1.2vw, 22px);
+      font-weight: 400;
+      line-height: 1.5;
+    }
+
+    .silence-frame-closing .silence-ending {
+      margin-top: 26px;
+      font-family: var(--serif);
+      font-size: clamp(32px, 2.45vw, 44px);
+      font-style: italic;
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    #sem-respostas-prontas {
+      height: 360svh;
+      min-height: 2200px;
+      background: var(--verde-escuro);
+    }
+
+    .answers-sticky {
+      position: sticky;
+      top: 0;
+      height: 100svh;
+      min-height: 620px;
+      overflow: hidden;
+    }
+
+    .answers-background {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    .answers-background img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .answers-stage {
+      position: relative;
+      width: min(100%, var(--content-width));
+      height: 100%;
+      margin-inline: auto;
+      padding-inline: var(--page-gutter);
+    }
+
+    .answers-title {
+      position: absolute;
+      top: 18%;
+      left: 52%;
+      margin: 0;
+      color: var(--quase-branco);
+      font-family: var(--serif);
+      font-size: clamp(40px, 3.2vw, 58px);
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      line-height: 1.05;
+      opacity: 0;
+      transform: translate3d(0, 12px, 0);
+      will-change: opacity, transform;
+    }
+
+    .answers-title em {
+      font-weight: 500;
+    }
+
+    .answers-frame {
+      position: absolute;
+      width: min(43%, 720px);
+      color: var(--quase-branco);
+    }
+
+    .answers-frame-one {
+      top: 32%;
+      left: 6%;
+    }
+
+    .answers-frame-two {
+      top: 43%;
+      left: 36%;
+    }
+
+    .answers-frame-three {
+      top: 54%;
+      left: 65%;
+      width: min(31%, 520px);
+    }
+
+    .answers-item {
+      margin: 0 0 clamp(14px, 1.8vh, 20px);
+      font-family: var(--sans);
+      font-size: 13px;
+      font-weight: 300;
+      line-height: 1.32;
+      opacity: 0;
+      transform: translate3d(0, 12px, 0);
+      will-change: opacity, transform;
+    }
+
+    .answers-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .answers-lead {
+      font-size: clamp(14px, 0.85vw, 17px);
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    #tempo-de-cada-um {
+      height: calc((100vw * 1447 / 1920) + 200svh);
+      min-height: 0;
+      background: var(--cinza-claro);
+    }
+
+    .time-sticky {
+      position: sticky;
+      top: calc(50svh - 33.9140625vw);
+      height: calc(100vw * 1447 / 1920);
+      min-height: 0;
+      overflow: hidden;
+      background: var(--cinza-claro);
+    }
+
+    .time-background {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    .time-background img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .time-stage {
+      position: relative;
+      width: min(100%, var(--content-width));
+      height: 100%;
+      margin-inline: auto;
+      padding-inline: var(--page-gutter);
+    }
+
+    .time-panel {
+      position: absolute;
+      top: 20%;
+      right: 7%;
+      bottom: 30%;
+      left: 42%;
+      background: rgba(255, 255, 255, 0.88);
+      box-shadow: 0 18px 60px rgba(80, 93, 95, 0.06);
+      opacity: 0;
+      will-change: opacity;
+    }
+
+    .time-frame {
+      position: absolute;
+      top: 42%;
+      left: 46%;
+      width: min(40%, 660px);
+      color: var(--verde-escuro);
+      transform: translateY(-45%);
+    }
+
+    .time-title,
+    .time-headline {
+      margin: 0 0 clamp(34px, 5vh, 54px);
+      color: var(--azul);
+      font-family: var(--serif);
+      font-size: clamp(38px, 2.9vw, 52px);
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      line-height: 1.06;
+    }
+
+    .time-title em {
+      font-weight: 500;
+    }
+
+    .time-headline {
+      max-width: 700px;
+      text-align: left;
+    }
+
+    .time-item {
+      margin: 0 0 clamp(16px, 2vh, 22px);
+      font-family: var(--sans);
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.42;
+      opacity: 0;
+      transform: translate3d(0, 12px, 0);
+      will-change: opacity, transform;
+    }
+
+    .time-lead {
+      margin-bottom: clamp(28px, 4vh, 42px);
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    .time-title.time-item,
+    .time-headline.time-item {
+      margin: 0 0 clamp(34px, 5vh, 54px);
+      color: var(--azul);
+      font-family: var(--serif);
+      font-size: clamp(38px, 2.9vw, 52px);
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      line-height: 1.06;
+    }
+
+    #citacao {
+      width: 100%;
+      height: auto;
+      min-height: 0;
+      aspect-ratio: 1920 / 706;
+      background: #8c817d;
+    }
+
+    .quote-sticky {
+      position: relative;
+      height: 100%;
+      min-height: 0;
+      overflow: hidden;
+      background: #8c817d;
+    }
+
+    .quote-background {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    .quote-background img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .quote-stage {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      width: min(100%, var(--content-width));
+      height: 100%;
+      margin-inline: auto;
+      padding: var(--header-height) var(--page-gutter) 0;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .quote-content {
+      width: min(76%, 1380px);
+      transform: translateY(-3%);
+    }
+
+    .quote-text {
+      margin: 0;
+      color: #fff;
+      font-family: var(--serif);
+      font-size: clamp(38px, 3.25vw, 60px);
+      font-style: italic;
+      font-weight: 400;
+      letter-spacing: -0.018em;
+      line-height: 1.12;
+      opacity: 0;
+      transform: scale(0.97);
+      transform-origin: center;
+      transition: opacity 1200ms ease, transform 1200ms ease;
+      will-change: opacity, transform;
+    }
+
+    .quote-author {
+      margin: clamp(54px, 8vh, 82px) 0 0;
+      color: rgba(255, 255, 255, 0.94);
+      font-family: var(--sans);
+      font-size: clamp(11px, 0.78vw, 14px);
+      font-style: normal;
+      font-weight: 400;
+      letter-spacing: 0.42em;
+      line-height: 1.4;
+      text-transform: uppercase;
+      opacity: 0;
+      transform: translate3d(0, 8px, 0);
+      transition: opacity 900ms ease 380ms, transform 900ms ease 380ms;
+      will-change: opacity, transform;
+    }
+
+    .quote-sticky.is-visible .quote-text,
+    .quote-sticky.is-visible .quote-author {
+      opacity: 1;
+      transform: none;
+    }
+
+    #sobre-filipe {
+      position: relative;
+      min-height: max(1200px, 102.1875vw);
+      overflow: hidden;
+      background: #e9e1de;
+    }
+
+    .about-background {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    .about-background img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .about-shell {
+      position: relative;
+      z-index: 1;
+      width: min(100%, var(--content-width));
+      min-height: max(1200px, 102.1875vw);
+      margin-inline: auto;
+      padding: clamp(112px, 8.2vw, 158px) var(--page-gutter) clamp(84px, 6vw, 116px);
+    }
+
+    .about-photo {
+      position: absolute;
+      z-index: 2;
+      top: 7.6%;
+      left: 49%;
+      width: 46%;
+      height: auto;
+      pointer-events: none;
+    }
+
+    .about-copy {
+      position: relative;
+      z-index: 3;
+      width: 43%;
+      color: var(--verde-escuro);
+    }
+
+    .about-title,
+    .about-headline {
+      margin: 0;
+      color: var(--azul);
+      font-family: var(--serif);
+      font-weight: 500;
+      letter-spacing: -0.02em;
+    }
+
+    .about-title {
+      font-size: clamp(38px, 3vw, 56px);
+      line-height: 1;
+    }
+
+    .about-title em {
+      font-weight: 500;
+    }
+
+    .about-headline {
+      max-width: 690px;
+      margin-top: clamp(92px, 8.2vw, 158px);
+      font-size: clamp(31px, 2.35vw, 45px);
+      line-height: 1.08;
+    }
+
+    .about-narrative {
+      margin-top: clamp(54px, 5vw, 96px);
+    }
+
+    .about-narrative p {
+      margin: 0 0 clamp(20px, 2vw, 34px);
+      font-family: var(--serif);
+      font-size: clamp(14px, 1.2vw, 20px);
+      font-weight: 500;
+      line-height: 1.58;
+    }
+
+    .about-credentials {
+      position: absolute;
+      z-index: 1;
+      right: 16%;
+      bottom: 4.8%;
+      left: 5.5%;
+      margin: 0;
+      padding: clamp(28px, 2.8vw, 52px) clamp(30px, 3vw, 58px);
+      background: rgba(255, 255, 255, 0.5);
+      color: var(--verde-escuro);
+      font-family: var(--sans);
+    }
+
+    .about-credential-row {
+      display: flex;
+      gap: 18px;
+      margin: 0 0 18px;
+      align-items: baseline;
+      font-size: clamp(12px, 0.9vw, 15px);
+      line-height: 1.45;
+    }
+
+    .about-credential-row:last-child {
+      margin-bottom: 0;
+    }
+
+    .about-credential-row dt {
+      flex: 0 0 auto;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .about-credential-row dd {
+      margin: 0;
+      font-weight: 400;
+    }
+
+    .about-reveal,
+    .section-reveal {
+      opacity: 0;
+      transform: translate3d(0, 10px, 0);
+      transition: opacity 520ms ease, transform 520ms ease;
+      will-change: opacity, transform;
+    }
+
+    .about-reveal.is-visible,
+    .section-reveal.is-visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    #como-funciona {
+      min-height: max(900px, 62vw);
+      background: linear-gradient(90deg, #efebe9 0%, #e1d7d3 100%);
+    }
+
+    .process-shell {
+      width: min(100%, var(--content-width));
+      min-height: max(900px, 62vw);
+      margin-inline: auto;
+      padding: clamp(104px, 8vw, 154px) var(--page-gutter) clamp(68px, 5vw, 96px);
+    }
+
+    .process-intro {
+      max-width: 900px;
+    }
+
+    .process-title {
+      margin: 0;
+      color: var(--azul);
+      font-family: var(--serif);
+      font-size: clamp(34px, 2.55vw, 48px);
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      line-height: 1.06;
+    }
+
+    .process-lead {
+      max-width: 850px;
+      margin: clamp(30px, 3vw, 52px) 0 0;
+      color: var(--verde-escuro);
+      font-family: var(--sans);
+      font-size: clamp(14px, 0.95vw, 17px);
+      font-weight: 400;
+      line-height: 1.55;
+    }
+
+    .process-table {
+      width: min(100%, 1360px);
+      margin: clamp(44px, 4vw, 68px) 0 0;
+      border-top: 1px solid rgba(92, 105, 105, 0.36);
+    }
+
+    .process-row {
+      display: grid;
+      min-height: 64px;
+      grid-template-columns: minmax(205px, 23%) 1fr;
+      gap: clamp(24px, 4vw, 72px);
+      margin: 0;
+      padding: 16px 4px;
+      border-bottom: 1px solid rgba(92, 105, 105, 0.3);
+      align-items: center;
+    }
+
+    .process-row dt,
+    .process-row dd {
+      margin: 0;
+      font-family: var(--sans);
+    }
+
+    .process-row dt {
+      color: var(--azul);
+      font-size: clamp(11px, 0.72vw, 13px);
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      text-transform: uppercase;
+    }
+
+    .process-row dd {
+      color: var(--verde-escuro);
+      font-size: clamp(13px, 0.9vw, 16px);
+      font-weight: 400;
+      line-height: 1.45;
+    }
+
+    .process-note {
+      max-width: 1120px;
+      margin: clamp(30px, 3vw, 52px) 0 0;
+      color: var(--verde-escuro);
+      font-family: var(--serif);
+      font-size: 16px;
+      font-style: italic;
+      font-weight: 500;
+      line-height: 1.55;
+    }
+
+    #contato {
+      position: relative;
+      min-height: max(900px, 65.0520833vw);
+      overflow: hidden;
+      background: #d8c7bd;
+    }
+
+    .contact-background {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    .contact-background img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .contact-shell {
+      position: relative;
+      z-index: 1;
+      width: min(100%, var(--content-width));
+      min-height: max(900px, 65.0520833vw);
+      margin-inline: auto;
+    }
+
+    .contact-panel {
+      position: absolute;
+      top: 18%;
+      bottom: auto;
+      left: 5.4%;
+      width: 50%;
+      padding: clamp(50px, 4vw, 78px) clamp(48px, 4.5vw, 86px);
+      background: rgba(255, 255, 255, 0.88);
+    }
+
+    .contact-title {
+      max-width: 850px;
+      margin: 0;
+      color: #746963;
+      font-family: var(--serif);
+      font-size: clamp(34px, 2.55vw, 48px);
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      line-height: 1.08;
+    }
+
+    .contact-title em {
+      font-weight: 500;
+    }
+
+    .contact-lead {
+      margin: clamp(20px, 1.8vw, 34px) 0 0;
+      color: var(--verde-escuro);
+      font-family: var(--serif);
+      font-size: clamp(16px, 1.5vw, 24px);
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    .contact-cta {
+      display: inline-flex;
+      min-width: min(100%, 520px);
+      min-height: 60px;
+      margin-top: clamp(34px, 3.2vw, 58px);
+      padding: 16px 28px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 2px;
+      background: var(--azul);
+      box-shadow: 0 10px 28px rgba(83, 105, 119, 0.12);
+      color: #fff;
+      font-family: var(--sans);
+      font-size: clamp(12px, 0.9vw, 16px);
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      text-align: center;
+      text-decoration: none;
+      transition: background-color 300ms ease, box-shadow 300ms ease, transform 300ms ease;
+    }
+
+    .contact-cta:hover {
+      background: var(--verde);
+      box-shadow: 0 14px 34px rgba(65, 104, 93, 0.2);
+      transform: translateY(-2px);
+    }
+
+    .contact-details {
+      margin: clamp(36px, 3.2vw, 58px) 0 0;
+    }
+
+    .contact-row {
+      display: grid;
+      grid-template-columns: 145px 1fr;
+      gap: 16px;
+      margin: 0 0 14px;
+      color: var(--verde-escuro);
+      font-family: var(--sans);
+      font-size: clamp(12px, 0.82vw, 15px);
+      line-height: 1.45;
+    }
+
+    .contact-row:last-child {
+      margin-bottom: 0;
+    }
+
+    .contact-row dt,
+    .contact-row dd {
+      margin: 0;
+    }
+
+    .contact-row dt {
+      color: var(--azul);
+      font-weight: 700;
+    }
+
+    .contact-row dd,
+    .contact-row a {
+      color: inherit;
+      font-weight: 400;
+      text-decoration: none;
+    }
+
+    .contact-row a:hover {
+      color: var(--azul);
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    .site-section:nth-child(even) {
+      background: rgba(246, 244, 246, 0.2);
+    }
+
+    .site-footer {
+      position: relative;
+      min-height: max(560px, 44.8958333vw);
+      overflow: hidden;
+      color: var(--branco);
+      background: #566668;
+    }
+
+    .footer-background {
+      position: absolute;
+      z-index: 0;
+      inset: 0;
+    }
+
+    .footer-background img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .footer-inner {
+      position: relative;
+      z-index: 1;
+      width: min(82%, 1575px);
+      min-height: max(560px, 44.8958333vw);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(320px, 1.08fr) minmax(520px, 0.92fr);
+      gap: clamp(64px, 7vw, 140px);
+      align-items: center;
+    }
+
+    .footer-brand {
+      align-self: center;
+      padding-top: 2%;
+    }
+
+    .footer-logo {
+      width: clamp(280px, 25vw, 485px);
+      height: auto;
+      display: block;
+      filter: brightness(0) invert(1);
+    }
+
+    .footer-socials {
+      margin-top: clamp(28px, 2.2vw, 44px);
+      padding-left: clamp(8px, 1.3vw, 24px);
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .footer-social-link {
+      width: 38px;
+      height: 38px;
+      display: inline-grid;
+      place-items: center;
+      color: rgba(255, 255, 255, 0.92);
+      border-radius: 50%;
+      text-decoration: none;
+      transition: color 260ms ease, background-color 260ms ease, transform 260ms ease;
+    }
+
+    .footer-social-link svg,
+    .footer-social-link img {
+      width: 21px;
+      height: 21px;
+      display: block;
+    }
+
+    .footer-social-link img {
+      object-fit: contain;
+      filter: brightness(0) invert(1);
+      transition: filter 260ms ease;
+    }
+
+    .footer-social-link:hover,
+    .footer-social-link:focus-visible {
+      color: var(--verde-escuro);
+      background: rgba(255, 255, 255, 0.9);
+      transform: translateY(-2px);
+    }
+
+    .footer-social-link:hover img,
+    .footer-social-link:focus-visible img {
+      filter: none;
+    }
+
+    .footer-details {
+      display: grid;
+      grid-template-columns: minmax(260px, 1.25fr) minmax(205px, 0.75fr);
+      gap: clamp(42px, 4vw, 82px);
+      font-family: var(--sans);
+      font-size: clamp(12px, 0.78vw, 15px);
+      line-height: 1.65;
+    }
+
+    .footer-details h2 {
+      margin: 0 0 17px;
+      color: inherit;
+      font-family: var(--sans);
+      font-size: clamp(11px, 0.72vw, 14px);
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .footer-details p {
+      margin: 0;
+    }
+
+    .footer-note {
+      display: block;
+      margin-top: 17px;
+      font-size: 0.92em;
+      line-height: 1.55;
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--azul);
+      outline-offset: 5px;
+    }
+
+    @media (max-width: 1120px) {
+      :root {
+        --header-height: 72px;
+        --page-gutter: 22px;
+      }
+
+      html {
+        scroll-padding-top: 0;
+      }
+
+      .site-header,
+      .site-header.is-scrolled {
+        height: var(--header-height);
+      }
+
+      .site-header.is-hidden {
+        height: 48px;
+        background: rgba(246, 244, 246, 0.96);
+        box-shadow: 0 6px 22px rgba(80, 93, 95, 0.06);
+        transform: none;
+      }
+
+      .site-header.is-hidden .brand-logo,
+      .site-header.is-scrolled.is-hidden .brand-logo {
+        width: min(38vw, 132px);
+        max-height: 34px;
+      }
+
+      .site-header.is-hidden .menu-toggle {
+        transform: scale(0.88);
+      }
+
+      .brand-logo,
+      .site-header.is-scrolled .brand-logo {
+        display: block;
+        width: min(48vw, 165px);
+        max-height: 46px;
+      }
+
+      .brand-mark {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .site-nav {
+        position: fixed;
+        z-index: -1;
+        inset: var(--header-height) 0 auto;
+        min-height: calc(100svh - var(--header-height));
+        padding: 48px var(--page-gutter);
+        display: grid;
+        place-items: center;
+        color: var(--verde-escuro);
+        background: rgba(246, 244, 246, 0.97);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-16px);
+        transition: opacity 250ms ease, visibility 250ms ease, transform 250ms ease;
+      }
+
+      .site-nav.is-open {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+
+      .nav-list {
+        flex-direction: column;
+        gap: 26px;
+        text-align: center;
+      }
+
+      .nav-link {
+        font-size: clamp(27px, 8vw, 36px);
+      }
+
+      .header-actions {
+        display: none;
+      }
+
+      .nav-mobile-actions {
+        width: min(100%, 360px);
+        margin-top: 14px;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+      }
+
+      .nav-mobile-actions .instagram-link {
+        align-self: center;
+      }
+
+      .nav-mobile-actions .header-cta {
+        min-height: 50px;
+        font-size: 12px;
+      }
+
+      .site-section {
+        min-height: 62vh;
+      }
+
+      #hero {
+        height: 240svh;
+        min-height: 1400px;
+      }
+
+      .hero-sticky {
+        min-height: 560px;
+        background-image: url("assets/images/bg-hero-mobile.webp");
+        background-position: center;
+      }
+
+      .hero-sticky::after {
+        background: linear-gradient(180deg, rgba(246, 244, 246, 0.06), rgba(246, 244, 246, 0.16));
+      }
+
+      .hero-opening,
+      .hero-conclusion {
+        top: 30%;
+        width: calc(100% - (2 * var(--page-gutter)));
+      }
+
+      .hero-opening {
+        transform: translate3d(0, 0, 0);
+      }
+
+      .hero-title {
+        font-size: clamp(32px, 8.8vw, 43px);
+        line-height: 1.05;
+      }
+
+      .hero-title br,
+      .hero-conclusion-title br {
+        display: none;
+      }
+
+      .hero-support {
+        margin: 32px 0 0;
+        font-size: clamp(17px, 4.5vw, 21px);
+        line-height: 1.48;
+      }
+
+      .hero-conclusion-intro {
+        font-size: clamp(18px, 4.6vw, 22px);
+      }
+
+      .hero-conclusion-title {
+        font-size: clamp(32px, 8.7vw, 43px);
+        line-height: 1.08;
+      }
+
+      .hero-ctas {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        margin-top: 30px;
+      }
+
+      .hero-button {
+        min-height: 50px;
+        padding: 12px 16px;
+        font-size: 11px;
+      }
+
+      #sofrimento-silencio {
+        height: 400svh;
+        min-height: 2350px;
+      }
+
+      .silence-sticky {
+        min-height: 560px;
+      }
+
+      .silence-title {
+        top: 18%;
+        font-size: clamp(32px, 8.8vw, 43px);
+      }
+
+      .silence-frame {
+        top: 56%;
+        left: var(--page-gutter);
+        width: calc(100% - (2 * var(--page-gutter)));
+      }
+
+      .silence-frame p {
+        margin-bottom: 18px;
+        font-size: clamp(17px, 4.5vw, 21px);
+        line-height: 1.45;
+      }
+
+      .silence-question {
+        font-size: clamp(21px, 5.5vw, 26px) !important;
+      }
+
+      .silence-frame-closing p {
+        margin-bottom: 10px;
+        font-size: clamp(15px, 3.9vw, 18px);
+      }
+
+      .silence-frame-closing .silence-ending {
+        margin-top: 22px;
+        font-size: clamp(27px, 7vw, 34px);
+      }
+
+      #sem-respostas-prontas {
+        height: 330svh;
+        min-height: 1950px;
+      }
+
+      .answers-sticky {
+        min-height: 560px;
+      }
+
+      .answers-title {
+        top: 19%;
+        left: var(--page-gutter);
+        font-size: clamp(32px, 8.8vw, 43px);
+      }
+
+      .answers-frame,
+      .answers-frame-one,
+      .answers-frame-two,
+      .answers-frame-three {
+        left: var(--page-gutter);
+        width: calc(100% - (2 * var(--page-gutter)));
+      }
+
+      .answers-frame-one { top: 32%; }
+      .answers-frame-two { top: 42%; }
+      .answers-frame-three { top: 52%; }
+
+      .answers-item {
+        margin-bottom: 14px;
+        font-size: 13px;
+        line-height: 1.35;
+      }
+
+      .answers-lead {
+        font-size: clamp(14px, 3.8vw, 17px);
+        line-height: 1.3;
+      }
+
+      #tempo-de-cada-um {
+        height: calc((100vw * 1447 / 965) + 180svh);
+        min-height: 0;
+      }
+
+      .time-sticky {
+        top: calc(50svh - 67.4766839vw);
+        height: calc(100vw * 1447 / 965);
+      }
+
+      .time-background source,
+      .time-background img {
+        object-position: center;
+      }
+
+      .time-panel {
+        top: 8%;
+        right: 18px;
+        bottom: 8%;
+        left: 18px;
+        background: rgba(255, 255, 255, 0.9);
+      }
+
+      .time-frame {
+        top: 50%;
+        left: calc(var(--page-gutter) * 1.7);
+        width: calc(100% - (3.4 * var(--page-gutter)));
+        transform: translateY(-50%);
+      }
+
+      .time-title,
+      .time-headline {
+        margin-bottom: 28px;
+        font-size: clamp(30px, 8vw, 40px);
+      }
+
+      .time-headline {
+        text-align: left;
+      }
+
+      .time-item {
+        margin-bottom: 14px;
+        font-size: 14px;
+        line-height: 1.38;
+      }
+
+      .time-lead {
+        margin-bottom: 24px;
+        font-size: 14px;
+      }
+
+      .time-title.time-item,
+      .time-headline.time-item {
+        margin-bottom: 28px;
+        font-size: clamp(30px, 8vw, 40px);
+        line-height: 1.06;
+      }
+
+      #citacao {
+        height: auto;
+        min-height: clamp(430px, 118vw, 540px);
+        aspect-ratio: auto;
+      }
+
+      .quote-background source,
+      .quote-background img {
+        object-position: center;
+      }
+
+      .quote-stage {
+        min-height: clamp(430px, 118vw, 540px);
+        padding: 58px calc(var(--page-gutter) * 1.35);
+      }
+
+      .quote-content {
+        width: 100%;
+        transform: translateY(-2%);
+      }
+
+      .quote-text {
+        font-size: clamp(29px, 8vw, 39px);
+        line-height: 1.14;
+      }
+
+      .quote-author {
+        margin-top: 44px;
+        font-size: 10px;
+        letter-spacing: 0.3em;
+      }
+
+      #sobre-filipe {
+        min-height: 0;
+        background: linear-gradient(90deg, #f3efee 0%, #e4dad7 100%);
+      }
+
+      .about-background {
+        inset: 0 0 auto;
+        height: auto;
+        -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 80%, rgba(0, 0, 0, 0.72) 89%, transparent 100%);
+        mask-image: linear-gradient(to bottom, #000 0%, #000 80%, rgba(0, 0, 0, 0.72) 89%, transparent 100%);
+      }
+
+      .about-background img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        object-position: top center;
+      }
+
+      .about-shell {
+        min-height: 0;
+        padding: calc(var(--header-height) + 18px) calc(var(--page-gutter) * 1.25) 76px;
+      }
+
+      .about-photo {
+        top: 140px;
+        left: 10%;
+        width: 80%;
+      }
+
+      .about-copy {
+        width: 100%;
+      }
+
+      .about-title {
+        font-size: clamp(35px, 10vw, 44px);
+        text-align: center;
+      }
+
+      .about-headline {
+        margin-top: 520px;
+        font-size: clamp(29px, 8vw, 38px);
+        line-height: 1.08;
+      }
+
+      .about-narrative {
+        margin-top: 44px;
+      }
+
+      .about-narrative p {
+        margin-bottom: 22px;
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
+      .about-credentials {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        left: auto;
+        margin-top: 48px;
+        padding: 28px 24px;
+      }
+
+      .about-credential-row {
+        display: block;
+        margin-bottom: 18px;
+        font-size: 12px;
+        line-height: 1.5;
+      }
+
+      .about-credential-row dt,
+      .about-credential-row dd {
+        display: inline;
+      }
+
+      .about-credential-row dt {
+        margin-right: 6px;
+      }
+
+      #como-funciona,
+      .process-shell {
+        min-height: 1100px;
+      }
+
+      #como-funciona {
+        background: linear-gradient(90deg, #f3efee 0%, #e4dad7 100%);
+      }
+
+      .process-shell {
+        padding: calc(var(--header-height) + 64px) calc(var(--page-gutter) * 1.25) 84px;
+      }
+
+      .process-title {
+        font-size: clamp(34px, 9vw, 43px);
+      }
+
+      .process-lead {
+        margin-top: 32px;
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
+      .process-table {
+        margin-top: 54px;
+      }
+
+      .process-row {
+        min-height: 0;
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding: 19px 2px;
+      }
+
+      .process-row dt {
+        font-size: 11px;
+      }
+
+      .process-row dd {
+        font-size: 13px;
+      }
+
+      .process-note {
+        margin-top: 32px;
+        font-size: 16px;
+      }
+
+      #contato,
+      .contact-shell {
+        min-height: 1000px;
+      }
+
+      .contact-background img {
+        object-position: center;
+      }
+
+      .contact-panel {
+        top: calc(var(--header-height) + 64px);
+        right: calc(var(--page-gutter) * 1.55);
+        bottom: auto;
+        left: calc(var(--page-gutter) * 1.55);
+        width: auto;
+        padding: 44px 24px;
+        background: rgba(255, 255, 255, 0.9);
+      }
+
+      .contact-title {
+        font-size: clamp(30px, 8vw, 38px);
+      }
+
+      .contact-lead {
+        margin-top: 20px;
+        font-size: 16px;
+      }
+
+      .contact-cta {
+        width: 100%;
+        min-width: 0;
+        min-height: 62px;
+        margin-top: 34px;
+        padding: 17px 20px;
+        font-size: 12px;
+      }
+
+      .contact-details {
+        margin-top: 42px;
+      }
+
+      .contact-row {
+        grid-template-columns: 1fr;
+        gap: 4px;
+        margin-bottom: 14px;
+        font-size: 12px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+      }
+
+      #hero {
+        height: auto;
+        min-height: 100svh;
+      }
+
+      .hero-sticky {
+        position: relative;
+        height: auto;
+        min-height: 100svh;
+      }
+
+      .hero-stage {
+        min-height: 100svh;
+        padding-top: calc(var(--header-height) + 72px);
+        padding-bottom: 72px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 72px;
+      }
+
+      .hero-layer,
+      .hero-opening,
+      .hero-conclusion,
+      .hero-ctas,
+      .hero-support,
+      .hero-conclusion-intro,
+      .hero-conclusion-title,
+      .hero-button {
+        position: relative;
+        inset: auto;
+        width: 100%;
+        opacity: 1 !important;
+        transform: none !important;
+      }
+
+      #sofrimento-silencio {
+        height: auto;
+        min-height: 100svh;
+      }
+
+      .silence-sticky {
+        position: relative;
+        height: auto;
+        min-height: 100svh;
+      }
+
+      .silence-stage {
+        min-height: 100svh;
+        padding-top: calc(var(--header-height) + 72px);
+        padding-bottom: 72px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 54px;
+      }
+
+      .silence-title,
+      .silence-frame,
+      .silence-item {
+        position: relative;
+        inset: auto;
+        width: 100%;
+        opacity: 1 !important;
+        transform: none !important;
+      }
+
+      #sem-respostas-prontas {
+        height: auto;
+        min-height: 100svh;
+      }
+
+      .answers-sticky {
+        position: relative;
+        height: auto;
+        min-height: 100svh;
+      }
+
+      .answers-stage {
+        min-height: 100svh;
+        padding-top: calc(var(--header-height) + 72px);
+        padding-bottom: 72px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 54px;
+      }
+
+      .answers-title,
+      .answers-frame,
+      .answers-item {
+        position: relative;
+        inset: auto;
+        width: 100%;
+        opacity: 1 !important;
+        transform: none !important;
+      }
+
+      #tempo-de-cada-um {
+        height: auto;
+        min-height: 100svh;
+      }
+
+      .time-sticky {
+        position: relative;
+        top: 0;
+        height: auto;
+        min-height: 100svh;
+      }
+
+      .time-stage {
+        min-height: 100svh;
+        padding-top: calc(var(--header-height) + 72px);
+        padding-bottom: 72px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 54px;
+      }
+
+      .time-panel {
+        inset: 7%;
+        opacity: 1 !important;
+      }
+
+      .time-frame,
+      .time-item {
+        position: relative;
+        inset: auto;
+        width: 100%;
+        opacity: 1 !important;
+        transform: none !important;
+      }
+
+      #citacao {
+        height: auto;
+        min-height: 0;
+      }
+
+      .quote-sticky {
+        position: relative;
+        height: 100%;
+      }
+
+      .quote-text,
+      .quote-author {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+
+      .about-reveal,
+      .section-reveal {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+    }
+    @media (max-width: 1120px) {
+      .site-footer,
+      .footer-inner {
+        min-height: max(680px, 148.704663vw);
+      }
+
+      .footer-inner {
+        width: min(82%, 680px);
+        padding: 13vh 0 10vh;
+        grid-template-columns: 1fr;
+        gap: clamp(72px, 13vw, 110px);
+        align-content: center;
+      }
+
+      .footer-brand {
+        padding-top: 0;
+      }
+
+      .footer-logo {
+        width: min(76vw, 430px);
+      }
+
+      .footer-socials {
+        margin-top: 26px;
+        padding-left: 4px;
+      }
+
+      .footer-details {
+        grid-template-columns: 1fr 1fr;
+        gap: 42px;
+        font-size: clamp(12px, 2.5vw, 15px);
+      }
+
+      .footer-details h2 {
+        font-size: clamp(11px, 2.35vw, 14px);
+      }
+    }
+
+    @media (max-width: 620px) {
+      .footer-inner {
+        width: min(82%, 470px);
+        padding: 12vh 0 9vh;
+        gap: 62px;
+      }
+
+      .footer-logo {
+        width: min(78vw, 360px);
+      }
+
+      .footer-details {
+        grid-template-columns: 1fr;
+        gap: 38px;
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
+
+  <header class="site-header" data-header>
+    <div class="header-inner">
+      <a class="brand" href="#hero" aria-label="Filipe Istvandic — início">
+        <img class="brand-logo" src="assets/images/logo-horizontal.png" alt="Filipe Istvandic — Psicanalista e Psicólogo" width="640" height="211" decoding="async">
+        <img class="brand-mark" src="assets/images/brand-mark.png" alt="" width="89" height="100" decoding="async" aria-hidden="true">
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation" aria-label="Abrir menu">
+        <span class="menu-toggle-lines" aria-hidden="true"></span>
+      </button>
+
+      <nav class="site-nav" id="main-navigation" aria-label="Navegação principal">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="#sofrimento-silencio">O Caminho</a></li>
+          <li><a class="nav-link" href="#tempo-de-cada-um">A Psicanálise</a></li>
+          <li><a class="nav-link" href="#sobre-filipe">Sobre Filipe</a></li>
+          <li><a class="nav-link" href="#como-funciona">Como Funciona</a></li>
+          <li><a class="nav-link" href="#contato">Contato</a></li>
+          <li class="nav-mobile-actions">
+            <a class="instagram-link" href="https://www.instagram.com/filipeistvandic" target="_blank" rel="noopener" aria-label="Instagram de Filipe Istvandic">
+              <img class="instagram-symbol" src="assets/icons/instagram.svg" alt="" aria-hidden="true">
+            </a>
+            <a class="header-cta" href="https://wa.me/5511970126488?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20primeira%20conversa." target="_blank" rel="noopener">Agendar uma primeira conversa</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a class="instagram-link" href="https://www.instagram.com/filipeistvandic" target="_blank" rel="noopener" aria-label="Instagram de Filipe Istvandic">
+          <img class="instagram-symbol" src="assets/icons/instagram.svg" alt="" aria-hidden="true">
+        </a>
+        <a class="header-cta" href="https://wa.me/5511970126488?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20primeira%20conversa." target="_blank" rel="noopener">Agendar uma primeira conversa</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="site-section" id="hero" aria-labelledby="hero-title">
+      <div class="hero-sticky">
+        <div class="hero-stage">
+          <div class="hero-layer hero-opening">
+            <h1 class="hero-title" id="hero-title">Existe algo que <em>não passa</em> e que os<br> recursos habituais já <em>não conseguem resolver.</em></h1>
+            <p class="hero-support">
+              <span>Existem sentimentos que retornam.</span>
+              <span>Relações que se repetem.</span>
+              <span>Escolhas que contradizem o que desejamos.</span>
+              <span>Sofrimentos que permanecem mesmo depois de compreendidos.</span>
+            </p>
+          </div>
+
+          <div class="hero-layer hero-conclusion">
+            <p class="hero-conclusion-intro">A psicanálise não oferece uma explicação pronta para isso.</p>
+            <p class="hero-conclusion-title">Oferece um espaço onde cada pessoa<br> pode <em>construir o seu próprio entendimento.</em></p>
+            <div class="hero-ctas">
+              <a class="hero-button" href="https://wa.me/5511970126488?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20primeira%20conversa." target="_blank" rel="noopener">Agendar uma primeira conversa</a>
+              <a class="hero-button" href="#como-funciona">Como funciona</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="site-section" id="sofrimento-silencio" aria-labelledby="silence-title">
+      <div class="silence-sticky">
+        <picture class="silence-background" aria-hidden="true">
+          <source media="(max-width: 1120px)" srcset="assets/images/bg-sofrimento-silenciado-mobile.webp">
+          <img src="assets/images/bg-sofrimento-silenciado.webp" alt="" loading="lazy" decoding="async">
+        </picture>
+        <div class="silence-stage">
+          <h2 class="silence-title" id="silence-title">O sofrimento <em>em silêncio</em></h2>
+
+          <div class="silence-frame silence-frame-one">
+            <p class="silence-item">Às vezes, o sofrimento não chega fazendo barulho.</p>
+            <p class="silence-item">Chega em pequenos movimentos.</p>
+            <p class="silence-item">Na sensação constante de ansiedade.</p>
+            <p class="silence-item">Na dificuldade de construir ou manter relações.</p>
+          </div>
+
+          <div class="silence-frame silence-frame-two">
+            <p class="silence-item">Na repetição de situações que parecem sempre terminar do mesmo jeito.</p>
+            <p class="silence-item">Na compulsão. Na culpa. Na autocobrança.</p>
+            <p class="silence-item">Na impressão de estar vivendo uma vida que deixou de fazer sentido.</p>
+          </div>
+
+          <div class="silence-frame silence-frame-three">
+            <p class="silence-item">Ou simplesmente naquela pergunta difícil de responder:</p>
+            <p class="silence-item silence-question"><em>"Por que isso continua acontecendo comigo?"</em></p>
+          </div>
+
+          <div class="silence-frame silence-frame-four silence-frame-closing">
+            <p class="silence-item">Nem sempre existe uma resposta imediata.</p>
+            <p class="silence-item">E talvez essa não seja a primeira pergunta que</p>
+            <p class="silence-item">a análise procura responder.</p>
+            <p class="silence-item silence-ending">Antes disso, existe um caminho de escuta.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="site-section" id="sem-respostas-prontas" aria-labelledby="answers-title">
+      <div class="answers-sticky">
+        <picture class="answers-background" aria-hidden="true">
+          <source media="(max-width: 1120px)" srcset="assets/images/bg-sem-respostas-prontas-mobile.webp">
+          <img src="assets/images/bg-sem-respostas-prontas.webp" alt="" loading="lazy" decoding="async">
+        </picture>
+        <div class="answers-stage">
+          <h2 class="answers-title" id="answers-title">Sem <em>respostas prontas</em></h2>
+
+          <div class="answers-frame answers-frame-one">
+            <p class="answers-item answers-lead">A psicanálise não oferece respostas prontas.</p>
+            <p class="answers-item answers-lead">Oferece um espaço onde perguntas podem, finalmente, ser escutadas.</p>
+            <p class="answers-item">Vivemos cercados por respostas rápidas. Métodos. Passos. Explicações. Conselhos.</p>
+            <p class="answers-item">Mas algumas experiências humanas não podem ser reduzidas a fórmulas.</p>
+          </div>
+
+          <div class="answers-frame answers-frame-two">
+            <p class="answers-item answers-lead">Cada pessoa constrói sua história de maneira singular.</p>
+            <p class="answers-item">Cada sofrimento tem sua própria lógica.</p>
+            <p class="answers-item">Cada palavra carrega sentidos que pertencem apenas a quem a diz.</p>
+          </div>
+
+          <div class="answers-frame answers-frame-three">
+            <p class="answers-item answers-lead">Por isso, a psicanálise não trabalha com protocolos. Trabalha com o que é único: o que aquele sujeito específico traz, repete, cala.</p>
+            <p class="answers-item">Não para apagar sua história. Mas para se relacionar com ela de outra maneira.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="site-section" id="tempo-de-cada-um" aria-labelledby="time-title">
+      <div class="time-sticky">
+        <picture class="time-background" aria-hidden="true">
+          <source media="(max-width: 1120px)" srcset="assets/images/bg-o-tempo-de-cada-um-mobile.webp">
+          <img src="assets/images/bg-o-tempo-de-cada-um.webp" alt="" loading="lazy" decoding="async">
+        </picture>
+        <div class="time-panel" aria-hidden="true"></div>
+
+        <div class="time-stage">
+          <div class="time-frame time-frame-one">
+            <h2 class="time-title time-item" id="time-title">O <em>tempo</em> de cada um</h2>
+            <p class="time-item time-lead">Uma escuta que respeita o tempo de cada pessoa.</p>
+            <p class="time-item">Nem toda dor consegue ser nomeada logo no início. Nem toda compreensão acontece de uma vez.</p>
+            <p class="time-item">Assim como uma história não é construída em um único capítulo, também não é possível compreender uma vida a partir de um único encontro.</p>
+          </div>
+
+          <div class="time-frame time-frame-two">
+            <h3 class="time-headline time-item">O processo analítico acontece no tempo de cada pessoa. Sem pressa. Sem roteiro.</h3>
+            <p class="time-item">Ao longo das sessões, palavras, lembranças, silêncios, sonhos, afetos e repetições passam a ocupar um lugar importante.</p>
+            <p class="time-item">Pouco a pouco, aquilo que antes parecia apenas sofrimento pode revelar aspectos da própria história que ainda não haviam encontrado espaço para existir.</p>
+            <p class="time-item">É nesse movimento que novos sentidos podem surgir, não porque alguém os oferece, mas porque passam a ser construídos por quem vive essa experiência.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="site-section" id="citacao" aria-label="Citação de Sigmund Freud">
+      <div class="quote-sticky">
+        <picture class="quote-background" aria-hidden="true">
+          <source media="(max-width: 767px)" srcset="assets/images/bg-citacao-mobile.webp">
+          <img src="assets/images/bg-citacao.webp" alt="" loading="lazy" decoding="async">
+        </picture>
+        <div class="quote-stage">
+          <blockquote class="quote-content">
+            <p class="quote-text">“Da incapacidade duradoura de viver à capacidade de viver a existência de forma duradoura.”</p>
+            <footer class="quote-author">— Sigmund Freud</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+    <section class="site-section" id="sobre-filipe" aria-labelledby="about-title">
+      <picture class="about-background" aria-hidden="true">
+        <source media="(max-width: 1120px)" srcset="assets/images/bg-sobre-filipe-mobile.webp">
+        <img src="assets/images/bg-sobre-filipe.webp" alt="" loading="lazy" decoding="async">
+      </picture>
+
+      <div class="about-shell">
+        <img class="about-photo" src="assets/images/filipe.webp" alt="Filipe Istvandic, psicanalista e psicólogo" width="874" height="1361" loading="lazy" decoding="async">
+
+        <div class="about-copy">
+          <h2 class="about-title about-reveal" id="about-title" style="--about-delay: 0ms">Sou <em>Filipe Istvandic</em></h2>
+          <h3 class="about-headline about-reveal" style="--about-delay: 100ms">Uma trajetória construída entre diferentes campos do saber.</h3>
+
+          <div class="about-narrative">
+            <p class="about-reveal" style="--about-delay: 0ms">Minha trajetória profissional soma mais de 20 anos, construída a partir de percursos distintos, unidos por um mesmo interesse: compreender o sofrimento humano e suas relações com a linguagem, onde essas dimensões escapam às explicações imediatas.</p>
+            <p class="about-reveal" style="--about-delay: 90ms">Antes de me dedicar integralmente à psicologia e à psicanálise, atuei em exatas — engenharia e finanças. Essa experiência ampliou minha compreensão sobre os impasses subjetivos presentes nas organizações e na vida profissional, e sobre os modos singulares de responder às exigências da vida contemporânea.</p>
+            <p class="about-reveal" style="--about-delay: 180ms">Foi na psicanálise que encontrei um campo capaz de sustentar uma escuta orientada pelo compromisso com a singularidade de cada sujeito, e com a verdade que se inscreve em seu modo de falar, desejar e sofrer.</p>
+            <p class="about-reveal" style="--about-delay: 270ms">Hoje, minha prática é sustentada pela formação permanente, pela supervisão clínica, pelo estudo contínuo da obra de Freud e Lacan, e pela experiência da própria análise, elementos indissociáveis da ética que orienta o trabalho psicanalítico.</p>
+            <p class="about-reveal" style="--about-delay: 360ms">Compreendo a clínica como um espaço em que a palavra pode produzir deslocamentos, possibilitando a cada pessoa construir uma relação menos alienada com seu sintoma, seu desejo e sua própria história.</p>
+          </div>
+        </div>
+
+        <dl class="about-credentials">
+          <div class="about-credential-row about-reveal" style="--about-delay: 0ms"><dt>Psicólogo</dt><dd>Universidade São Judas Tadeu (2022)</dd></div>
+          <div class="about-credential-row about-reveal" style="--about-delay: 80ms"><dt>Formação em Psicanálise</dt><dd>CEP (2024)</dd></div>
+          <div class="about-credential-row about-reveal" style="--about-delay: 160ms"><dt>Supervisão</dt><dd>com William Zeytoullian (Instituto D'alma) e Laura Ramalho</dd></div>
+          <div class="about-credential-row about-reveal" style="--about-delay: 240ms"><dt>7 anos de clínica</dt><dd>com adolescentes e adultos</dd></div>
+          <div class="about-credential-row about-reveal" style="--about-delay: 320ms"><dt>Palestrante</dt><dd>anual de prevenção ao suicídio em instituições públicas e privadas</dd></div>
+          <div class="about-credential-row about-reveal" style="--about-delay: 400ms"><dt>CRP 06/213048</dt><dd></dd></div>
+        </dl>
+      </div>
+    </section>
+    <section class="site-section" id="como-funciona" aria-labelledby="process-title">
+      <div class="process-shell">
+        <div class="process-intro">
+          <h2 class="process-title section-reveal" id="process-title">Antes de começar, uma conversa.</h2>
+          <p class="process-lead section-reveal">O trabalho começa com um período de entrevistas iniciais, em que analista e paciente avaliam juntos se há indicação para dar início ao processo. Não há compromisso antes desse momento.</p>
+        </div>
+
+        <dl class="process-table">
+          <div class="process-row"><dt class="section-reveal">Duração da sessão</dt><dd class="section-reveal">50 minutos, podendo variar para mais ou para menos</dd></div>
+          <div class="process-row"><dt class="section-reveal">Frequência</dt><dd class="section-reveal">Mínima de uma vez por semana</dd></div>
+          <div class="process-row"><dt class="section-reveal">Modalidade</dt><dd class="section-reveal">Presencial (Barra Funda, São Paulo) ou online</dd></div>
+          <div class="process-row"><dt class="section-reveal">Atendimento online</dt><dd class="section-reveal">Todo o Brasil e o mundo</dd></div>
+          <div class="process-row"><dt class="section-reveal">Valor</dt><dd class="section-reveal">Combinado nas primeiras conversas</dd></div>
+          <div class="process-row"><dt class="section-reveal">Cobrança</dt><dd class="section-reveal">Por sessão</dd></div>
+          <div class="process-row"><dt class="section-reveal">Pagamento</dt><dd class="section-reveal">Pix ou dinheiro</dd></div>
+          <div class="process-row"><dt class="section-reveal">Política de falta</dt><dd class="section-reveal">Faltas são cobradas</dd></div>
+          <div class="process-row"><dt class="section-reveal">Cancelamento/remarcação</dt><dd class="section-reveal">Com 24h de antecedência</dd></div>
+        </dl>
+
+        <p class="process-note section-reveal">O Conselho Federal de Psicologia proíbe garantias de resultado ou cura. O que se pode oferecer com segurança: sigilo, presença, formação sólida e um espaço que respeita o tempo de cada pessoa.</p>
+      </div>
+    </section>
+
+    <section class="site-section" id="contato" aria-labelledby="contact-title">
+      <picture class="contact-background" aria-hidden="true">
+        <source media="(max-width: 1120px)" srcset="assets/images/bg-contato-mobile.webp">
+        <img src="assets/images/bg-contato.webp" alt="" loading="lazy" decoding="async">
+      </picture>
+
+      <div class="contact-shell">
+        <div class="contact-panel">
+          <h2 class="contact-title section-reveal" id="contact-title">Se você chegou até aqui<br>talvez já saiba que <em>quer conversar.</em></h2>
+          <p class="contact-lead section-reveal">A sessão inicial é só para isso: conversar, sem compromisso.</p>
+
+          <a class="contact-cta" href="https://wa.me/5511970126488" target="_blank" rel="noopener noreferrer">Agendar uma primeira conversa</a>
+
+          <dl class="contact-details">
+            <div class="contact-row"><dt class="section-reveal">WhatsApp</dt><dd class="section-reveal"><a href="https://wa.me/5511970126488" target="_blank" rel="noopener noreferrer">+55 11 97012-6488</a></dd></div>
+            <div class="contact-row"><dt class="section-reveal">E-mail</dt><dd class="section-reveal"><a href="mailto:filipeistv@gmail.com">filipeistv@gmail.com</a></dd></div>
+            <div class="contact-row"><dt class="section-reveal">Endereço</dt><dd class="section-reveal">R. Vitorino Carmilo, 453 — Barra Funda/Santa Cecília, São Paulo – SP, 01153-000<br><small>A 10 minutos da estação Marechal Deodoro, linha vermelha.</small></dd></div>
+            <div class="contact-row"><dt class="section-reveal">Horário</dt><dd class="section-reveal">Segunda a quinta, das 8h às 22h</dd></div>
+            <div class="contact-row"><dt class="section-reveal">Instagram</dt><dd class="section-reveal"><a href="https://www.instagram.com/filipeistvandic" target="_blank" rel="noopener noreferrer">@filipeistvandic</a></dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="rodape" aria-label="Rodapé">
+    <picture class="footer-background" aria-hidden="true">
+      <source media="(max-width: 1120px)" srcset="assets/images/bg-rodape-mobile.webp">
+      <img src="assets/images/bg-rodape.webp" alt="" loading="lazy" decoding="async">
+    </picture>
+
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img class="footer-logo" src="assets/images/logo-horizontal.png" alt="Filipe Istvandic — Psicanalista e Psicólogo" width="640" height="211" loading="lazy" decoding="async">
+        <nav class="footer-socials" aria-label="Canais de contato">
+          <a class="footer-social-link" href="https://wa.me/5511970126488" target="_blank" rel="noopener noreferrer" aria-label="Conversar pelo WhatsApp">
+            <img src="assets/icons/whatsapp.svg" alt="" aria-hidden="true">
+          </a>
+          <a class="footer-social-link" href="mailto:filipeistv@gmail.com" aria-label="Enviar e-mail">
+            <img src="assets/icons/email.svg" alt="" aria-hidden="true">
+          </a>
+          <a class="footer-social-link" href="https://www.instagram.com/filipeistvandic" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Filipe Istvandic">
+            <img src="assets/icons/instagram.svg" alt="" aria-hidden="true">
+          </a>
+        </nav>
+      </div>
+
+      <div class="footer-details">
+        <section aria-labelledby="footer-address-title">
+          <h2 id="footer-address-title">Endereço</h2>
+          <p>R. Vitorino Carmilo, 453 — Barra Funda/Santa Cecília<br>São Paulo – SP, 01153-000</p>
+          <small class="footer-note">A 10 minutos da estação Marechal Deodoro,<br>linha vermelha.</small>
+        </section>
+        <section aria-labelledby="footer-hours-title">
+          <h2 id="footer-hours-title">Horário</h2>
+          <p>Segunda a quinta,<br>das 8h às 22h</p>
+        </section>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      const header = document.querySelector("[data-header]");
+      const toggle = document.querySelector(".menu-toggle");
+      const nav = document.querySelector(".site-nav");
+      const links = document.querySelectorAll(".nav-link");
+      const mobileQuery = window.matchMedia("(max-width: 1120px)");
+      const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+      const hero = document.querySelector("#hero");
+      const heroBackground = document.querySelector(".hero-sticky");
+      const heroOpening = document.querySelector(".hero-opening");
+      const heroSupport = document.querySelector(".hero-support");
+      const heroConclusion = document.querySelector(".hero-conclusion");
+      const heroConclusionIntro = document.querySelector(".hero-conclusion-intro");
+      const heroConclusionTitle = document.querySelector(".hero-conclusion-title");
+      const heroCtas = document.querySelector(".hero-ctas");
+      const heroButtons = [...document.querySelectorAll(".hero-button")];
+      const silenceSection = document.querySelector("#sofrimento-silencio");
+      const silenceTitle = document.querySelector(".silence-title");
+      const silenceFrames = [...document.querySelectorAll(".silence-frame")];
+      const answersSection = document.querySelector("#sem-respostas-prontas");
+      const answersTitle = document.querySelector(".answers-title");
+      const answersFrames = [...document.querySelectorAll(".answers-frame")];
+      const timeSection = document.querySelector("#tempo-de-cada-um");
+      const timeSticky = document.querySelector(".time-sticky");
+      const timePanel = document.querySelector(".time-panel");
+      const timeFrames = [...document.querySelectorAll(".time-frame")];
+      const quoteSection = document.querySelector("#citacao");
+      const quoteText = document.querySelector(".quote-text");
+      const quoteAuthor = document.querySelector(".quote-author");
+      const aboutRevealItems = [...document.querySelectorAll(".about-reveal, .section-reveal")];
+      let lastScrollY = window.scrollY;
+      let heroFrameRequested = false;
+      let silenceFrameRequested = false;
+      let answersFrameRequested = false;
+      let timeFrameRequested = false;
+      let staticRevealFrameRequested = false;
+
+      const clamp = (value, min = 0, max = 1) => Math.min(Math.max(value, min), max);
+      const range = (value, start, end) => clamp((value - start) / (end - start));
+
+      const closeMenu = () => {
+        toggle.setAttribute("aria-expanded", "false");
+        toggle.setAttribute("aria-label", "Abrir menu");
+        nav.classList.remove("is-open");
+        document.body.classList.remove("menu-open");
+      };
+
+      const updateHeader = () => {
+        const currentScrollY = window.scrollY;
+        header.classList.toggle("is-scrolled", currentScrollY > 24);
+
+        if (mobileQuery.matches && !nav.classList.contains("is-open")) {
+          const scrollingDown = currentScrollY > lastScrollY && currentScrollY > 120;
+          header.classList.toggle("is-hidden", scrollingDown);
+        } else {
+          header.classList.remove("is-hidden");
+        }
+
+        lastScrollY = Math.max(currentScrollY, 0);
+      };
+
+      const updateHero = () => {
+        heroFrameRequested = false;
+
+        if (motionQuery.matches) {
+          [heroOpening, heroSupport, heroConclusion, heroConclusionIntro, heroConclusionTitle, heroCtas, ...heroButtons].forEach((element) => {
+            element.style.removeProperty("opacity");
+            element.style.removeProperty("transform");
+          });
+          heroBackground.style.removeProperty("background-position");
+          return;
+        }
+
+        const travel = Math.max(hero.offsetHeight - window.innerHeight, 1);
+        const progress = clamp((window.scrollY - hero.offsetTop) / travel);
+        const supportEntry = range(progress, 0.08, 0.18);
+        const openingExit = range(progress, 0.36, 0.46);
+        const introEntry = range(progress, 0.54, 0.62);
+        const titleEntry = range(progress, 0.64, 0.72);
+        const firstCtaEntry = range(progress, 0.76, 0.83);
+        const secondCtaEntry = range(progress, 0.86, 0.93);
+
+        heroOpening.style.opacity = String(1 - openingExit);
+        heroOpening.style.transform = `translate3d(0, ${-10 * openingExit}px, 0)`;
+        heroSupport.style.opacity = String(supportEntry);
+        heroSupport.style.transform = `translate3d(0, ${(1 - supportEntry) * 12}px, 0)`;
+
+        heroConclusion.style.opacity = "1";
+        heroConclusion.style.transform = "none";
+        heroCtas.style.opacity = "1";
+        heroCtas.style.transform = "none";
+
+        heroConclusionIntro.style.opacity = String(introEntry);
+        heroConclusionIntro.style.transform = `translate3d(0, ${(1 - introEntry) * 12}px, 0)`;
+        heroConclusionTitle.style.opacity = String(titleEntry);
+        heroConclusionTitle.style.transform = `translate3d(0, ${(1 - titleEntry) * 12}px, 0)`;
+        heroButtons[0].style.opacity = String(firstCtaEntry);
+        heroButtons[0].style.transform = `translate3d(0, ${(1 - firstCtaEntry) * 12}px, 0)`;
+        heroButtons[1].style.opacity = String(secondCtaEntry);
+        heroButtons[1].style.transform = `translate3d(0, ${(1 - secondCtaEntry) * 12}px, 0)`;
+
+        if (!mobileQuery.matches) {
+          heroBackground.style.backgroundPosition = `center calc(50% + ${progress * 3}px)`;
+        } else {
+          heroBackground.style.backgroundPosition = "center";
+        }
+      };
+
+      const requestHeroUpdate = () => {
+        if (heroFrameRequested) return;
+        heroFrameRequested = true;
+        window.requestAnimationFrame(updateHero);
+      };
+
+      const updateSilence = () => {
+        silenceFrameRequested = false;
+        const silenceItems = [...document.querySelectorAll(".silence-item")];
+
+        if (motionQuery.matches) {
+          [silenceTitle, ...silenceFrames, ...silenceItems].forEach((element) => {
+            element.style.removeProperty("opacity");
+            element.style.removeProperty("transform");
+          });
+          return;
+        }
+
+        const travel = Math.max(silenceSection.offsetHeight - window.innerHeight, 1);
+        const progress = clamp((window.scrollY - silenceSection.offsetTop) / travel);
+        const titleEntry = range(progress, 0.01, 0.05);
+
+        silenceTitle.style.opacity = String(titleEntry);
+        silenceTitle.style.transform = `translate3d(0, ${(1 - titleEntry) * 12}px, 0)`;
+
+        const animateFrame = (frame, entries, exitStart = null, exitEnd = null) => {
+          const exit = exitStart === null ? 0 : range(progress, exitStart, exitEnd);
+          [...frame.querySelectorAll(".silence-item")].forEach((item, index) => {
+            const entry = range(progress, entries[index][0], entries[index][1]);
+            const visibility = entry * (1 - exit);
+            item.style.opacity = String(visibility);
+            item.style.transform = `translate3d(0, ${(1 - entry) * 12 - exit * 8}px, 0)`;
+          });
+        };
+
+        animateFrame(silenceFrames[0], [[0.06, 0.09], [0.10, 0.13], [0.14, 0.17], [0.18, 0.21]], 0.23, 0.26);
+        animateFrame(silenceFrames[1], [[0.29, 0.32], [0.34, 0.37], [0.39, 0.42]], 0.45, 0.48);
+        animateFrame(silenceFrames[2], [[0.52, 0.56], [0.58, 0.62]], 0.68, 0.71);
+        animateFrame(silenceFrames[3], [[0.75, 0.78], [0.80, 0.83], [0.85, 0.88], [0.90, 0.94]]);
+      };
+
+      const requestSilenceUpdate = () => {
+        if (silenceFrameRequested) return;
+        silenceFrameRequested = true;
+        window.requestAnimationFrame(updateSilence);
+      };
+
+      const updateAnswers = () => {
+        answersFrameRequested = false;
+        const answersItems = [...document.querySelectorAll(".answers-item")];
+
+        if (motionQuery.matches) {
+          [answersTitle, ...answersFrames, ...answersItems].forEach((element) => {
+            element.style.removeProperty("opacity");
+            element.style.removeProperty("transform");
+          });
+          return;
+        }
+
+        const travel = Math.max(answersSection.offsetHeight - window.innerHeight, 1);
+        const progress = clamp((window.scrollY - answersSection.offsetTop) / travel);
+        const titleEntry = range(progress, 0.01, 0.05);
+
+        answersTitle.style.opacity = String(titleEntry);
+        answersTitle.style.transform = `translate3d(0, ${(1 - titleEntry) * 12}px, 0)`;
+
+        const animateFrame = (frame, entries, exitStart = null, exitEnd = null) => {
+          const exit = exitStart === null ? 0 : range(progress, exitStart, exitEnd);
+          [...frame.querySelectorAll(".answers-item")].forEach((item, index) => {
+            const entry = range(progress, entries[index][0], entries[index][1]);
+            const visibility = entry * (1 - exit);
+            item.style.opacity = String(visibility);
+            item.style.transform = `translate3d(0, ${(1 - entry) * 12 - exit * 8}px, 0)`;
+          });
+        };
+
+        animateFrame(answersFrames[0], [[0.06, 0.10], [0.11, 0.15], [0.17, 0.21], [0.23, 0.27]], 0.30, 0.33);
+        animateFrame(answersFrames[1], [[0.37, 0.41], [0.43, 0.47], [0.49, 0.53]], 0.57, 0.60);
+        animateFrame(answersFrames[2], [[0.65, 0.70], [0.73, 0.78]]);
+      };
+
+      const requestAnswersUpdate = () => {
+        if (answersFrameRequested) return;
+        answersFrameRequested = true;
+        window.requestAnimationFrame(updateAnswers);
+      };
+
+      const updateTime = () => {
+        timeFrameRequested = false;
+        const timeItems = [...document.querySelectorAll(".time-item")];
+
+        if (motionQuery.matches) {
+          [timePanel, ...timeFrames, ...timeItems].forEach((element) => {
+            element.style.removeProperty("opacity");
+            element.style.removeProperty("transform");
+          });
+          return;
+        }
+
+        const travel = Math.max(timeSection.offsetHeight - timeSticky.offsetHeight, 1);
+        const stickyTop = Number.parseFloat(window.getComputedStyle(timeSticky).top) || 0;
+        const animationStart = timeSection.offsetTop - stickyTop;
+        const progress = clamp((window.scrollY - animationStart) / travel);
+        const panelEntry = range(progress, 0.03, 0.09);
+
+        timePanel.style.opacity = String(panelEntry);
+
+        const animateFrame = (frame, entries, exitStart = null, exitEnd = null) => {
+          const exit = exitStart === null ? 0 : range(progress, exitStart, exitEnd);
+          [...frame.querySelectorAll(".time-item")].forEach((item, index) => {
+            const entry = range(progress, entries[index][0], entries[index][1]);
+            const visibility = entry * (1 - exit);
+            item.style.opacity = String(visibility);
+            item.style.transform = `translate3d(0, ${(1 - entry) * 12 - exit * 8}px, 0)`;
+          });
+        };
+
+        animateFrame(timeFrames[0], [[0.11, 0.16], [0.18, 0.23], [0.25, 0.30], [0.32, 0.37]], 0.44, 0.49);
+        animateFrame(timeFrames[1], [[0.56, 0.62], [0.65, 0.70], [0.73, 0.78], [0.81, 0.86]]);
+      };
+
+      const requestTimeUpdate = () => {
+        if (timeFrameRequested) return;
+        timeFrameRequested = true;
+        window.requestAnimationFrame(updateTime);
+      };
+
+      const updateStaticReveals = () => {
+        staticRevealFrameRequested = false;
+
+        if (motionQuery.matches) {
+          [quoteText, quoteAuthor, ...aboutRevealItems].forEach((element) => {
+            element.style.removeProperty("opacity");
+            element.style.removeProperty("transform");
+          });
+          return;
+        }
+
+        const quoteRect = quoteSection.getBoundingClientRect();
+        const quoteEntry = clamp((window.innerHeight * 0.82 - quoteRect.top) / (window.innerHeight * 0.45));
+        const authorEntry = range(quoteEntry, 0.42, 1);
+
+        quoteText.style.opacity = String(quoteEntry);
+        quoteText.style.transform = `scale(${0.97 + quoteEntry * 0.03})`;
+        quoteAuthor.style.opacity = String(authorEntry);
+        quoteAuthor.style.transform = `translate3d(0, ${(1 - authorEntry) * 8}px, 0)`;
+
+        aboutRevealItems.forEach((item) => {
+          const itemRect = item.getBoundingClientRect();
+          const entry = clamp((window.innerHeight * 0.9 - itemRect.top) / (window.innerHeight * 0.24));
+          item.style.opacity = String(entry);
+          item.style.transform = `translate3d(0, ${(1 - entry) * 10}px, 0)`;
+        });
+      };
+
+      const requestStaticRevealUpdate = () => {
+        if (staticRevealFrameRequested) return;
+        staticRevealFrameRequested = true;
+        window.requestAnimationFrame(updateStaticReveals);
+      };
+
+      toggle.addEventListener("click", () => {
+        const willOpen = toggle.getAttribute("aria-expanded") !== "true";
+        toggle.setAttribute("aria-expanded", String(willOpen));
+        toggle.setAttribute("aria-label", willOpen ? "Fechar menu" : "Abrir menu");
+        nav.classList.toggle("is-open", willOpen);
+        document.body.classList.toggle("menu-open", willOpen);
+        header.classList.remove("is-hidden");
+      });
+
+      links.forEach((link) => link.addEventListener("click", closeMenu));
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          closeMenu();
+          toggle.focus();
+        }
+      });
+
+      mobileQuery.addEventListener("change", closeMenu);
+      window.addEventListener("scroll", updateHeader, { passive: true });
+      window.addEventListener("scroll", requestHeroUpdate, { passive: true });
+      window.addEventListener("scroll", requestSilenceUpdate, { passive: true });
+      window.addEventListener("scroll", requestAnswersUpdate, { passive: true });
+      window.addEventListener("scroll", requestTimeUpdate, { passive: true });
+      window.addEventListener("scroll", requestStaticRevealUpdate, { passive: true });
+      window.addEventListener("resize", requestHeroUpdate);
+      window.addEventListener("resize", requestSilenceUpdate);
+      window.addEventListener("resize", requestAnswersUpdate);
+      window.addEventListener("resize", requestTimeUpdate);
+      window.addEventListener("resize", requestStaticRevealUpdate);
+      mobileQuery.addEventListener("change", requestHeroUpdate);
+      mobileQuery.addEventListener("change", requestSilenceUpdate);
+      mobileQuery.addEventListener("change", requestAnswersUpdate);
+      mobileQuery.addEventListener("change", requestTimeUpdate);
+      mobileQuery.addEventListener("change", requestStaticRevealUpdate);
+      motionQuery.addEventListener("change", requestHeroUpdate);
+      motionQuery.addEventListener("change", requestSilenceUpdate);
+      motionQuery.addEventListener("change", requestAnswersUpdate);
+      motionQuery.addEventListener("change", requestTimeUpdate);
+      motionQuery.addEventListener("change", requestStaticRevealUpdate);
+      updateHeader();
+      updateHero();
+      updateSilence();
+      updateAnswers();
+      updateTime();
+      updateStaticReveals();
+    })();
+  </script>
+</body>
+</html>
