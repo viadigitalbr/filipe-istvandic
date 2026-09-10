@@ -919,6 +919,9 @@
       left: 49%;
       width: 46%;
       height: auto;
+      aspect-ratio: 874 / 1361;
+      object-fit: contain;
+      object-position: top center;
       pointer-events: none;
     }
 
@@ -1361,6 +1364,73 @@
       outline-offset: 5px;
     }
 
+    @media (min-width: 1121px) {
+      #sobre-filipe {
+        min-height: 0;
+        background: linear-gradient(90deg, #efebe9, #e1d7d3);
+      }
+
+      .about-shell {
+        min-height: 0;
+        padding-bottom: 32px;
+      }
+
+      .process-shell {
+        padding-top: var(--header-height);
+      }
+
+      .about-background img {
+        height: var(--about-background-height, 100%);
+        object-fit: fill;
+        mask-image: linear-gradient(to bottom, #000 85%, transparent 100%);
+      }
+
+      .about-shell {
+        display: grid;
+        grid-template-columns: 43% 1fr;
+        column-gap: 6%;
+        align-content: start;
+      }
+
+      .about-copy {
+        grid-area: 1 / 1;
+        width: 100%;
+        align-self: end;
+      }
+
+      .about-headline {
+        margin-top: clamp(44px, 4vw, 68px);
+      }
+
+      .about-narrative {
+        margin-top: clamp(32px, 3vw, 50px);
+      }
+
+      .about-narrative p:last-child {
+        margin-bottom: 0;
+      }
+
+      .about-photo {
+        grid-area: 1 / 2;
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 100%;
+        aspect-ratio: 1122 / 1402;
+        align-self: end;
+      }
+
+      .about-credentials {
+        grid-area: 2 / 1;
+        position: relative;
+        inset: auto;
+        width: 100%;
+        margin-top: 36px;
+        padding: 0;
+        background: transparent;
+      }
+    }
+
     @media (max-width: 1120px) {
       :root {
         --header-height: 72px;
@@ -1736,7 +1806,7 @@
       }
 
       .about-headline {
-        margin-top: calc(34px + 124.6vw);
+        margin-top: calc(48px + 99.965vw);
         font-size: clamp(29px, 8vw, 38px);
         line-height: 1.08;
       }
@@ -2282,7 +2352,7 @@
       </picture>
 
       <div class="about-shell">
-        <img class="about-photo" src="assets/images/filipe.webp" alt="Filipe Istvandic, psicanalista e psicólogo" width="874" height="1361" loading="lazy" decoding="async">
+        <img class="about-photo" src="assets/images/filipe2.webp" alt="Filipe Istvandic, psicanalista e psicólogo" width="874" height="1361" loading="lazy" decoding="async">
 
         <div class="about-copy">
           <h2 class="about-title about-reveal" id="about-title" style="--about-delay: 0ms">Sou <em>Filipe Istvandic</em></h2>
@@ -2627,6 +2697,25 @@
         timeFrameRequested = true;
         window.requestAnimationFrame(updateTime);
       };
+
+      // The light photo panel is baked into the background image (bottom at y=1518).
+      // Scale its height with the portrait so their lower edges stay aligned.
+      const aboutSection = document.querySelector("#sobre-filipe");
+      const aboutPhoto = aboutSection.querySelector(".about-photo");
+      const alignAboutBackground = () => {
+        if (mobileQuery.matches) {
+          aboutSection.style.removeProperty("--about-background-height");
+          return;
+        }
+        const bottom = aboutPhoto.getBoundingClientRect().bottom - aboutSection.getBoundingClientRect().top;
+        aboutSection.style.setProperty("--about-background-height", `${bottom * 1962 / 1518}px`);
+      };
+      const aboutResizeObserver = new ResizeObserver(alignAboutBackground);
+      aboutResizeObserver.observe(aboutSection.querySelector(".about-shell"));
+      aboutResizeObserver.observe(aboutPhoto);
+      aboutResizeObserver.observe(aboutSection.querySelector(".about-copy"));
+      window.addEventListener("resize", alignAboutBackground);
+      alignAboutBackground();
 
       const updateStaticReveals = () => {
         staticRevealFrameRequested = false;
