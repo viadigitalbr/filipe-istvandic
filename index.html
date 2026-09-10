@@ -476,8 +476,8 @@
     }
 
     #sofrimento-silencio {
-      height: 440svh;
-      min-height: 2700px;
+      height: 330svh;
+      min-height: 2025px;
       background: var(--quase-branco);
     }
 
@@ -532,7 +532,7 @@
       font-weight: 500;
     }
 
-    .silence-frame {
+    .silence-moment {
       position: absolute;
       top: 58%;
       left: 52%;
@@ -540,6 +540,15 @@
       color: var(--terroso);
       transform: translateY(-50%);
       will-change: opacity, transform;
+    }
+
+    .silence-moment .silence-frame {
+      position: relative;
+      color: var(--terroso);
+    }
+
+    .silence-moment .silence-frame + .silence-frame {
+      margin-top: clamp(18px, 2.2vh, 28px);
     }
 
     .silence-frame p {
@@ -583,8 +592,8 @@
     }
 
     #sem-respostas-prontas {
-      height: 360svh;
-      min-height: 2200px;
+      height: 275svh;
+      min-height: 1675px;
       background: var(--verde-escuro);
     }
 
@@ -1520,8 +1529,8 @@
       }
 
       #sofrimento-silencio {
-        height: 400svh;
-        min-height: 2350px;
+        height: 300svh;
+        min-height: 1775px;
       }
 
       .silence-sticky {
@@ -1533,14 +1542,14 @@
         font-size: clamp(32px, 8.8vw, 43px);
       }
 
-      .silence-frame {
-        top: 56%;
+      .silence-moment {
+        top: 60%;
         left: var(--page-gutter);
         width: calc(100% - (2 * var(--page-gutter)));
       }
 
       .silence-frame p {
-        margin-bottom: 18px;
+        margin-bottom: 12px;
         font-size: clamp(17px, 4.5vw, 21px);
         line-height: 1.45;
       }
@@ -1560,8 +1569,8 @@
       }
 
       #sem-respostas-prontas {
-        height: 330svh;
-        min-height: 1950px;
+        height: 250svh;
+        min-height: 1475px;
       }
 
       .answers-sticky {
@@ -1708,7 +1717,7 @@
 
       .about-shell {
         min-height: 0;
-        padding: calc(var(--header-height) + 18px) calc(var(--page-gutter) * 1.25) 76px;
+        padding: calc(var(--header-height) + 18px) calc(var(--page-gutter) * 1.25) 24px;
       }
 
       .about-photo {
@@ -1777,7 +1786,7 @@
       }
 
       .process-shell {
-        padding: calc(var(--header-height) + 64px) calc(var(--page-gutter) * 1.25) 84px;
+        padding: var(--header-height) calc(var(--page-gutter) * 1.25) 84px;
       }
 
       .process-title {
@@ -1935,6 +1944,7 @@
       }
 
       .silence-title,
+      .silence-moment,
       .silence-frame,
       .silence-item {
         position: relative;
@@ -2165,6 +2175,7 @@
         <div class="silence-stage">
           <h2 class="silence-title" id="silence-title">O sofrimento <em>em silêncio</em></h2>
 
+          <div class="silence-moment">
           <div class="silence-frame silence-frame-one">
             <p class="silence-item">Às vezes, o sofrimento não chega fazendo barulho.</p>
             <p class="silence-item">Chega em pequenos movimentos.</p>
@@ -2178,6 +2189,9 @@
             <p class="silence-item">Na impressão de estar vivendo uma vida que deixou de fazer sentido.</p>
           </div>
 
+          </div>
+
+          <div class="silence-moment">
           <div class="silence-frame silence-frame-three">
             <p class="silence-item">Ou simplesmente naquela pergunta difícil de responder:</p>
             <p class="silence-item silence-question"><em>"Por que isso continua acontecendo comigo?"</em></p>
@@ -2188,6 +2202,7 @@
             <p class="silence-item">E talvez essa não seja a primeira pergunta que</p>
             <p class="silence-item">a análise procura responder.</p>
             <p class="silence-item silence-ending">Antes disso, existe um caminho de escuta.</p>
+          </div>
           </div>
         </div>
       </div>
@@ -2283,9 +2298,9 @@
         </div>
 
         <dl class="about-credentials">
-          <div class="about-credential-row about-reveal" style="--about-delay: 0ms"><dt>Psicólogo</dt><dd>Universidade São Judas Tadeu (2022)</dd></div>
-          <div class="about-credential-row about-reveal" style="--about-delay: 80ms"><dt>Formação em Psicanálise</dt><dd>CEP (2024)</dd></div>
-          <div class="about-credential-row about-reveal" style="--about-delay: 160ms"><dt>Supervisão</dt><dd>com William Zeytoullian (Instituto D'alma) e Laura Ramalho</dd></div>
+          <div class="about-credential-row about-reveal" style="--about-delay: 0ms"><dt>Psicólogo</dt><dd>Universidade São Judas Tadeu</dd></div>
+          <div class="about-credential-row about-reveal" style="--about-delay: 80ms"><dt>Formação em Psicanálise</dt><dd>CEP</dd></div>
+          <div class="about-credential-row about-reveal" style="--about-delay: 160ms"><dt>Supervisão</dt><dd>clínica contínua</dd></div>
           <div class="about-credential-row about-reveal" style="--about-delay: 240ms"><dt>7 anos de clínica</dt><dd>com adolescentes e adultos</dd></div>
           <div class="about-credential-row about-reveal" style="--about-delay: 320ms"><dt>Palestrante</dt><dd>anual de prevenção ao suicídio em instituições públicas e privadas</dd></div>
           <div class="about-credential-row about-reveal" style="--about-delay: 400ms"><dt>CRP 06/213048</dt><dd></dd></div>
@@ -2520,10 +2535,11 @@
           });
         };
 
-        animateFrame(silenceFrames[0], [[0.06, 0.09], [0.10, 0.13], [0.14, 0.17], [0.18, 0.21]], 0.23, 0.26);
-        animateFrame(silenceFrames[1], [[0.29, 0.32], [0.34, 0.37], [0.39, 0.42]], 0.45, 0.48);
-        animateFrame(silenceFrames[2], [[0.52, 0.56], [0.58, 0.62]], 0.68, 0.71);
-        animateFrame(silenceFrames[3], [[0.75, 0.78], [0.80, 0.83], [0.85, 0.88], [0.90, 0.94]]);
+        // Each pair shares an exit; the next pair enters only after it clears.
+        animateFrame(silenceFrames[0], [[0.05, 0.08], [0.09, 0.12], [0.13, 0.16], [0.17, 0.20]], 0.44, 0.48);
+        animateFrame(silenceFrames[1], [[0.21, 0.24], [0.25, 0.28], [0.29, 0.32]], 0.44, 0.48);
+        animateFrame(silenceFrames[2], [[0.51, 0.55], [0.57, 0.61]]);
+        animateFrame(silenceFrames[3], [[0.63, 0.66], [0.68, 0.71], [0.73, 0.76], [0.79, 0.83]]);
       };
 
       const requestSilenceUpdate = () => {
@@ -2561,9 +2577,9 @@
           });
         };
 
-        animateFrame(answersFrames[0], [[0.06, 0.10], [0.11, 0.15], [0.17, 0.21], [0.23, 0.27]], 0.30, 0.33);
-        animateFrame(answersFrames[1], [[0.37, 0.41], [0.43, 0.47], [0.49, 0.53]], 0.57, 0.60);
-        animateFrame(answersFrames[2], [[0.65, 0.70], [0.73, 0.78]]);
+        animateFrame(answersFrames[0], [[0.05, 0.09], [0.10, 0.14], [0.15, 0.19], [0.20, 0.24]], 0.29, 0.32);
+        animateFrame(answersFrames[1], [[0.34, 0.38], [0.40, 0.44], [0.46, 0.50]], 0.55, 0.58);
+        animateFrame(answersFrames[2], [[0.61, 0.66], [0.69, 0.74]]);
       };
 
       const requestAnswersUpdate = () => {
