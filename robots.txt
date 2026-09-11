@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://filipeistvandicpsi.com.br/sitemap.xml
